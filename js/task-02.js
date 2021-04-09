@@ -13,13 +13,13 @@ const ingredients = [
 const ingredientsUl = document.querySelector('#ingredients')
 
 
-ingredients.forEach(el => {
+const ingredientEl = ingredients.map(el => {
     const newItem = document.createElement('li')
     newItem.textContent = el;
-    ingredientsUl.appendChild(newItem);
+  return newItem
+  console.log(el)
 })
 
-
-
+ingredientsUl.append(...ingredientEl)
 
 
